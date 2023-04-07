@@ -1,0 +1,178 @@
+.home {
+  display: flex;
+  background-color: $color-bg-dark;
+  width: 100%;
+  min-height: 100vh;
+  color: $color-text-main;
+  font-size: 1.7rem;
+  position: relative;
+  padding-bottom: 3rem;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    span {
+      padding: 0 1rem;
+    }
+    // background-color: yellow;
+  }
+
+  &__user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem;
+
+    @include respond(phone) {
+      padding: 1.5rem;
+    }
+
+    h2 {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &--img {
+      display: block;
+      overflow: hidden;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include respond(phone) {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    &--name {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+
+  &__logout {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3rem;
+
+    @include respond(phone) {
+      padding: 1.5rem;
+    }
+
+    button {
+      background-color: darken($color: $color-bg-light, $amount: 10%);
+      color: $color-text-main;
+      border: none;
+      // margin-top: 2rem;
+      padding: 1rem;
+      cursor: pointer;
+      font-size: 1.7rem;
+      border-radius: 0.5rem;
+
+      @include respond(phone) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__card {
+    margin-top: 7rem;
+    width: 30%;
+
+    @include respond(tab-land) {
+      width: 70%;
+    }
+    @include respond(tab-port) {
+      width: 80%;
+    }
+
+    @include respond(phone) {
+      width: 95%;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    margin: 3rem 0;
+
+    &--text {
+      text-align: center;
+      margin: 5rem 0;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+
+    &--add {
+      display: flex;
+      // background-color: gray;
+    }
+
+    &--btn {
+      background-color: darken($color: $color-bg-light, $amount: 10%);
+      color: $color-text-main;
+      border: none;
+      margin-top: 2rem;
+      padding: 2rem;
+      cursor: pointer;
+      font-size: 2rem;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__input {
+    background-color: $color-bg-input;
+    width: 100%;
+    border: none;
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    color: $color-bg-input;
+    text-align: center;
+    font-weight: 500;
+    color: $color-text-main;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    &::placeholder {
+      text-align: center;
+      font-size: 1.7rem;
+      color: $color-text-placeholder;
+    }
+    &:active {
+      outline: none;
+    }
+    &:focus-visible {
+      border: none;
+    }
+    &:focus {
+      outline: 4px solid $color-input-border;
+    }
+  }
+}

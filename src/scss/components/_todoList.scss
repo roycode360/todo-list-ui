@@ -1,0 +1,57 @@
+.todoList {
+  background-color: $color-bg-light;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 3px;
+  border-bottom: 1px solid $color-border;
+  // width: 100%;
+
+  &__button {
+  }
+
+  &__priority {
+    &--high {
+      width: 1rem;
+      height: 1rem;
+      background: red;
+    }
+    &--medium {
+      width: 1rem;
+      height: 1rem;
+      background: orange;
+    }
+    &--low {
+      width: 1rem;
+      height: 1rem;
+      background: green;
+    }
+  }
+
+  &__title {
+    flex: 1;
+    margin-left: 1rem;
+    text-transform: capitalize;
+  }
+
+  &__actions {
+    &--icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+
+      &-delete {
+        color: $color-icon-delete;
+        cursor: pointer;
+      }
+      &-edit {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__date {
+    font-size: 1rem;
+  }
+}

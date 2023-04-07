@@ -1,0 +1,31 @@
+.searchComp {
+  &__input {
+    background-color: $color-bg-input;
+    width: 100%;
+    border: none;
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    color: $color-bg-input;
+    text-align: center;
+    font-weight: 500;
+    color: $color-text-main;
+    font-size: 1.7rem;
+    &::placeholder {
+      text-align: center;
+      font-size: 1.7rem;
+      color: $color-text-placeholder;
+    }
+    &:active {
+      outline: none;
+    }
+    &:focus-visible {
+      border: none;
+    }
+    &:focus {
+      outline: 4px solid $color-input-border;
+      //   transition: 0.2s all ease;
+    }
+  }
+  &__icon {
+  }
+}
